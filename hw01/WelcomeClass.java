@@ -1,12 +1,12 @@
 //////////////////////////////////////////////////////
-//Xintong MIng
+//Xintong Ming
 //hw01
 //Welcome Class Java Program
 //
 // first compile the program
 //      javac WelcomeClass.java
 // run the program
-//      java WelcomeClass.java//
+//      java WelcomeClass
 
 // define a class
 public class WelcomeClass{
