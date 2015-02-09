@@ -14,12 +14,14 @@
    			      
    			      System.out.print("Enter a double: ");
                         double x = myScanner.nextDouble(); // accept user input
-                        double x1,x2,x3;// define three veriables for later use
-                        x1 = ((int) x)*10000; // delete all the decimal points
-                        x2 = (int)(x *10000); // only have the four digits right to the decimal point
-                        x3 = x2-x1; // get the four digits
-                        int x4;
-                        x4 = (int)x3;// made the answer an integer
-                System.out.println("the four digits to the right of the decimal point is " +x4);
+                        int d1,d2,d3,d4;// define four digits
+                      
+                        
+                        d1=(int)(x*10)%10;
+                        d2=(int)(x*100)%10;
+                        d3=(int)(x*1000)%10;
+                        d4=(int)(x*10000)%10;
+                        
+                System.out.println("the four digits to the right of the decimal point is " +d1+d2+d3+d4);
    			  }
  }
