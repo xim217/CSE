@@ -66,10 +66,10 @@ public class WhichNumber {
                                         else if (scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")){
                                             System.out.print("You are lying!!!");
                                         }
-                    }
-            } 
-        else if(scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")) {
-            System.out.println("Is it divisible by 3");
+                }
+        } 
+        else if(scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("no")) {
+            System.out.println("Is it divisible by 3 ?");
                 if(scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")){
                     System.out.print("When divided by 3 is the result greater than 1 ?");
                         if(scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")){
@@ -124,8 +124,9 @@ public class WhichNumber {
                                         }
                                 }
                 }
+        }
         else {System.out.println("Invalid character");
         }
-        }
+        
     }
 }    
