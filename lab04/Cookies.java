@@ -21,7 +21,7 @@ public class Cookies {
                     if(cpp>0){
                         int cookiesn = cpp* people;
                         int difference = cookiesn-cookiesh;
-                        if(cookiesh>cookiesn){
+                        if(cookiesh>=cookiesn){
                             int factor = cookiesh%people;
                             if(factor==0){
                                 System.out.println("You have enough cookies, and you are able to divide evenly");
