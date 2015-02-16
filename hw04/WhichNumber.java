@@ -10,7 +10,7 @@ public class WhichNumber {
         scanner = new Scanner( System.in );
         System.out.println("Think of a number between 1 and 10 inclusive.");
         System.out.print("Is the number even ?");
-        if(scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")) {
+        if(scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")) { // statement accept yes or no commend
             System.out.println("Is it divisible by 3? ");
                 if(scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")){
                     System.out.print("Is the number divisible by 4?");
@@ -19,20 +19,20 @@ public class WhichNumber {
                                 if (scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")){
                                     System.out.print("Is your number 8 ?");
                                         if(scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")){
-                                            System.out.print("Yay!!!! I got it!!!");
+                                            System.out.print("Yay!!!! I got it!!!");// tells the user the outcome 
                                         }
                                         else if (scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")){
-                                            System.out.print("You are lying!!!");
+                                            System.out.print("You are lying!!!"); // tells the user the outcome 
                                         }
                                 }
                                 else if(scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")){
                                     System.out.print("Is your number 4 ?");
                                         if(scanner.next().equalsIgnoreCase("y")||scanner.next().equalsIgnoreCase("Y")){
                                             System.out.print("Yay!!!! I got it!!!");
-                                        }
+                                        }// tells the user the outcome 
                                         else if (scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")){
                                             System.out.print("You are lying!!!");
-                                        }
+                                        }// tells the user the outcome; else if statement parrallel with the if statement
                                 }
                         }
                         else if (scanner.next().equalsIgnoreCase("n")||scanner.next().equalsIgnoreCase("N")) {
