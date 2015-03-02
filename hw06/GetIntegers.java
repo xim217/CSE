@@ -37,6 +37,7 @@ import java.util.Scanner;
                 System.out.println("Please enter positive number, star over again");
             }
         }
+        String a=scann.next();
         System.out.println("Invalid input");
      }
  }

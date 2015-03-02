@@ -19,6 +19,7 @@ import java.util.Scanner;
             }
             else {
                 System.out.println("invalid input");
+                break;
             }
         }
      }
