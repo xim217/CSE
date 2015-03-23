@@ -24,6 +24,7 @@ public static void main(String[] args) {
         giant();
         System.out.println("Enter 'A' or 'a' to Attack, 'E' or 'E' to Escape, ANYTHING else is to YIELD");
         input = getInput(scan, "AaEe", 10);
+        System.out.println("YOU KILLED THE GIANT!");
         System.out.println("Congratulations! You SURVIVED! Get your REWARD!");
         System.out.println("There are three 3 tressure box in front of you! Enter the box number you want to open!");
         box();
@@ -70,7 +71,7 @@ public static String getInput(Scanner scan, String string){
         return "";
     }
     else {
-        System.out.println("you chose to quit");
+        System.out.println("Yea right LOSER!");
         System.exit(0);
     }
     return "";
@@ -85,10 +86,10 @@ public static String getInput(Scanner scan, String string, int trial){
         int random=(int)(Math.random()*2);
         if(random==1){
         t++;
-        System.out.println("you made a critical hit");
+        System.out.println("!!!!!you made a critical hit!!!!!");
         }
         else{
-            System.out.println("you missed");
+            System.out.println("you missed````````");
         }
     }
     else if (commend.equals("e")||commend.equals("E")){
@@ -102,7 +103,7 @@ public static String getInput(Scanner scan, String string, int trial){
         }
     }
     else {
-        System.out.println("Wrong commend, you are eaten by Giant");
+        System.out.println("Wrong commend, Executed by the GIANT! Game Over! ");
         System.exit(0);
     }
     if(t<10){
