@@ -65,7 +65,7 @@ public static String listArray(int num[]){
      int middle=(first+last)/2;
      while (first<=last){
          if (x>Array[middle]){
-             first=middle-1;
+             first=middle+1;
          }
          else if (x==Array[middle]){
              System.out.println(x+"was found in the list with "+middle+ " iterations");
