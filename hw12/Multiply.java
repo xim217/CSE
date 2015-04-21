@@ -4,41 +4,54 @@
 import java.util.Scanner;
 public class Multiply{
 public static void main (String []args){
+    System.out.println("Enter width and height for first matrix:");
+    int aR=0;
+    int aC=0;
+    aR=checkInt(aR);
+    aC=checkInt(aC);
+    System.out.println("Generating a matrix with width" +aR+" and height "+aC+" :");
+    int [][] array1=randomMatrix( aR,  aC);
+    System.out.println("first matrix generated(range -10 to 10)");
+    printMatrix(array1);
+    System.out.println("Enter width and height for second matrix:");
+    int bR=0;
+    int bC=0;
+    bR=checkInt(bR);
+    bC=checkInt(bC);
+    System.out.println("Generating a matrix with width" +bR+" and height "+bC+" :");
+    int [][] array2=randomMatrix( bR,  bC);
+    System.out.println("second matrix generated(range -10 to 10)");
+    printMatrix(array2);
+    if((aC==bR)){
+        System.out.println("=================Multiplying matrix : =======================");
+        int [][] MultiArray=matrixMultiply(array1,array2);
+        printMatrix(MultiArray);
+    }
+    else{
+        System.out.println(" Please enter correct dimension of array to multiply ");
+        System.out.println(" Colume of first matrix should be equal to row of second matrix ");
+    }
+}
+
+public static int checkInt(int x){
     Scanner scan= new Scanner(System.in);
-    System.out.println("Enter width and height for matrix:(width and height should be the same)");
-    int x=0;
-   // int y=0;
     int input=0;
-    int count=0;
-    for (int i=0;i<2;i++)
+    for (int i=0;i<1;i++){
     if (scan.hasNextInt()){
             input=scan.nextInt();
                 if (input<0) {
                 System.out.print(" enter positive number ");
                 i--;
                 }
-                else if (i>0&&input!=count){
-                System.out.println(" Please enter correct dimension of array to multiply ");
-                i--;
-                }
                 else {
                 x=input;
                 }
-                count=input;
             }
             else {
                 System.out.println("Not integer");
             }
-            System.out.println("Generating a matrix with width" +x+" and height "+x+" :");
-    int [][] array1=randomMatrix( x,  x);
-    int [][] array2=randomMatrix( x,  x);
-    System.out.println("first matrix generated(range -10 to 10)");
-    printMatrix(array1);
-    System.out.println("second matrix generated(range -10 to 10)");
-    printMatrix(array2);
-    System.out.println("=================Multiplying matrix : =======================");
-    int [][] MultiArray=matrixMultiply(array1,array2);
-    printMatrix(MultiArray);
+    }
+    return x;
 }
 
 public static int[][] randomMatrix(int r, int c){
@@ -55,12 +68,12 @@ public static int[][] randomMatrix(int r, int c){
 public static int[][] matrixMultiply(int[][] A, int[][] B){
     int aR = A.length;
     int aC = A[0].length;
-    int bR = B.length;
+    int bR = aC;
     int bC = B[0].length;
-    int [][] C= new int [aR][aC];
-    for(int i=0; i<aR;i++){
-        for(int j=0; j<bC;j++){
-            for(int k=0;k<aC;k++){
+    int [][] C= new int [aR][bC];
+    for(int i=0; i<aR;i++){// a row
+        for(int j=0; j<bC;j++){// b colume
+            for(int k=0;k<aC;k++){// a colume/b row
                 C[i][j]+=A[i][k]*B[k][j];
             }
         }
@@ -72,7 +85,7 @@ public static void printMatrix(int [][] a){
     int c = a[0].length;
     for (int i=0;i<r;i++){
         for(int j=0;j<c;j++){
-            System.out.print(a[i][j]+" ");
+            System.out.print(a[i][j]+"  ");
         }
         System.out.println();
     }
