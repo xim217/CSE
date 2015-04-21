@@ -58,7 +58,7 @@ public static String listArray(int num[]){
 	out+="} ";
 	return out;
   }
- public static int binary(int[] Array, int x){
+ public void binary(int[] Array, int x){
     
      int first=0;
      int last=14;
@@ -95,8 +95,7 @@ public static String listArray(int num[]){
  public static int[] scramble(int[] Array){
      for (int i=0; i<Array.length; i++) {
 	//find a random member to swap with
-	int target = (int) (Array.length * 
-		Math.random() );
+	int target = (int) (Array.length * Math.random() );
 
 
 	//swap the values
