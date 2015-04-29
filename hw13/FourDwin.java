@@ -10,12 +10,14 @@ public class FourDwin{
         System.out.println("Enter an integer X:");
         System.out.println("Enter an integer Y where Y > X:");
         int x=0;
-        int y=0;
         x=checkInt(x);
+        int y=0;
         y=checkInt(y);
         if (x>y){
             System.out.println("Invalid input. Please endter an integer for Y > X:");
-            y=checkInt(scan.nextInt());
+            while (x>y){
+                y=checkInt(y);
+            }
         }
         else{
             input=x+(int)((y-x)*(Math.random()));
@@ -25,9 +27,9 @@ public class FourDwin{
             for (int j=0;j<A[0].length;j++){
                 for (int k=0;k<A[0][0].length;k++){
                     for (int m=0;m<A[0][0][0].length;m++){
-                        int z=(int)(311*Math.random());
-                        double n=(z/10);
-                        A[i][j][k][m]=n;
+                        double z=(31*Math.random());
+                         z=Math.floor(z*10)/10;
+                        A[i][j][k][m]=z;
                     }
                 }
             }
@@ -149,7 +151,7 @@ public class FourDwin{
                     }
                     System.out.print("}");
                 }
-                System.out.print("}");
+                System.out.print("},");
             }
             System.out.println("        }");
         }
